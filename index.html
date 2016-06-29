@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Pig Dice</title>
+  </head>
+  <body>
+    <div class="container" id="header">
+      <h1>Pig Dice</h1>
+    </div>
+    <div class="container" id="dice">
+      <p>The first dice roll is <strong id="diceOne">n/a</strong>.</p>
+      <p>The first dice roll is <strong id="diceTwo">n/a</strong>.</p>
+      <p>Your current total is <strong id="currentTotal">0</strong>.</p>
+    </div>
+    <div class="container" id="scoreboard">
+      <button type="button" class="btn btn-success" id="playButton">Play</button>
+      <button type="button" class="btn btn-primary" id="stopButton">Hold</button>
+      <p>The current player is Player <strong id="currentPlayer">1</strong>.</p>
+      <p>Player 1's total is <strong id="playerOneTotal">0</strong>.</p>
+      <p>Player 2's total is <strong id="playerTwoTotal">0</strong>.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
