@@ -3,6 +3,16 @@ var randomNumber = function() {
   return Math.floor(Math.random() * 6) + 1;
 }
 
+var winCondition = function() {
+  if (playerOne.totalScore >= 100) {
+    alert("Player One won! Player Two is a loser!");
+    location.reload();
+  } else if (playerTwo.totalScore >= 100) {
+    alert("Player Two won! Player One is a loser!");
+    location.reload();
+  }
+}
+
 var changeTurn = function() {
   if (playerOne.isMyTurn === true) {
     playerOne.isMyTurn = false;
@@ -46,10 +56,12 @@ User.prototype.hold = function() {
     $("#currentTotal").text("0");
     $("#playerOneTotal").text(this.totalScore);
     changeTurn();
+    winCondition();
   } else if (playerTwo.isMyTurn === true) {
     $("#currentTotal").text("0");
     $("#playerTwoTotal").text(this.totalScore);
     changeTurn();
+    winCondition();
   }
 }
 
